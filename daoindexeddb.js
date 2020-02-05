@@ -42,10 +42,10 @@ class DAO {
                     req.onerror = rej;
                 });
             })();
-            return event.type == 'success';
+            return event.type === 'success';
         }
     }
-    // if no index value is passed than it returns all results
+
     async read(dbname, indexValue) {
         if (await this.isInitialized) {
             const transaction = this.db.transaction([dbname]);
@@ -81,7 +81,7 @@ class DAO {
                     req.onerror = rej;
                 });
             })();
-            return event.type == 'success';
+            return event.type === 'success';
         }
     }
 
@@ -96,7 +96,7 @@ class DAO {
                     req.onerror = rej;
                 });
             })();
-            return event.type == 'success';
+            return event.type === 'success';
         }
     }
 
